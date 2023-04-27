@@ -1,0 +1,53 @@
+import React from 'react'
+import './List.scss'
+import Card from '../Card/Card'
+
+
+const List = () => {
+
+    const data = [
+        {
+            id: 1,
+            img: "https://cdn.shopify.com/s/files/1/0971/5072/products/og_logo_puff_long_sleeve.jpg?v=1680904253",
+            title: "Long Sleeve",
+            isNew: true,
+            oldPrice: 50,
+            price: 34,
+        },
+        {
+            id: 2,
+            img: "https://cdn.shopify.com/s/files/1/0971/5072/products/og-key-camo-t-shirt-olive.jpg?v=1667584208",
+            title: "T-Shirt",
+            isNew: true,
+            oldPrice: 50,
+            price: 34,
+        },
+        {
+            id: 3,
+            img: "https://cdn.shopify.com/s/files/1/0971/5072/products/DSC_4385.jpg?v=1642541165",
+            title: "Hoody",
+            isNew: true,
+            oldPrice: 50,
+            price: 34,
+        },
+        {
+            id: 4,
+            img: "https://cdn.shopify.com/s/files/1/0971/5072/products/bolts-hat-white.jpg?v=1666646140",
+            title: "Hat",
+            isNew: true,
+            oldPrice: 50,
+            price: 34,
+        },
+    ]
+
+    return(
+        <div className='list'>
+            {data?.map(item=>(
+                <Card item={item} key={item.id}/>
+            ))}
+           
+        </div>
+    )
+}
+
+export default List;
